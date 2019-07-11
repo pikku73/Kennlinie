@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1,
+        maximum-scale=1, minimum-scale=1, width=device-width" />
+
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Kennlinie linear</title>
+    </head>
+    <body>
+        <div class="title">
+          Lineare Kennlinie eines Messgliedes
+        </div>
+        <div class="mainpic">
+            <!-- fixed diagram image -->
+            <img src="img/graphe.png">
+
+            <!-- input element for e_max -->
+            <span class="diagram_text" id="e_max_main_text">
+              E<sub>max</sub>
+            </span>
+            <input type="number" class="diagram_text diagram_input"
+              id="e_max_main_input"
+              value=""
+              onfocus="min_max_clicked('e_max')"
+              onclick="min_max_clicked('e_max')"
+              onchange="min_max_changed('e_max', this.value)"
+            >
+
+            <!-- input element for e_min -->
+            <span class="diagram_text" id="e_min_main_text">
+              E<sub>min</sub>
+            </span>
+            <input type="number" class="diagram_text diagram_input"
+              id="e_min_main_input"
+              value=""
+              onfocus="min_max_clicked('e_min')"
+              onclick="min_max_clicked('e_min')"
+              onchange="min_max_changed('e_min', this.value)"
+            >
+
+            <!-- unit for e -->
+            <span class="diagram_unit_text" id="e_unit_text">
+            </span>
+
+            <!-- input element for x_max -->
+            <span class="diagram_text" id="x_max_main_text">
+              x<sub>max</sub>
+            </span>
+            <input type="number" class="diagram_text diagram_input"
+              id="x_max_main_input"
+              value=""
+              onclick="min_max_clicked('x_max')"
+              onchange="min_max_changed('x_max', this.value)"
+            >
+
+            <!-- input element for x_min -->
+            <span class="diagram_text" id="x_min_main_text">
+              x<sub>min</sub>
+            </span>
+            <input type="number" class="diagram_input"
+              id="x_min_main_input"
+              value=""
+              onclick="min_max_clicked('x_min')"
+              onchange="min_max_changed('x_min', this.value)"
+            >
+
+            <!-- unit for x -->
+            <span class="diagram_unit_text" id="x_unit_text">
+            </span>
+
+            <!-- drop-down element for x-axis -->
+            <div class="dropdown" id="x_achse_main">
+              <button onclick="x_axis_button()" class="dropbtn" id="x_button"
+              >E</button>
+              <div id="x_axis_dropdown" class="dropdown-content">
+                <span id="x_button_1" class="dropdown-element">U</span><br>
+                <span id="x_button_2" class="dropdown-element">I</span><br>
+                <span id="x_button_3" class="dropdown-element">f</span><br>
+                <span id="x_button_4" class="dropdown-element">&tau;</span><br>
+              </div>
+            </div>
+
+            <!-- drop-down element for y-axis -->
+            <div class="dropdown" id="y_achse_main">
+              <button onclick="y_axis_button()" class="dropbtn" id="y_button"
+              >x</button>
+              <div id="y_axis_dropdown" class="dropdown-content">
+                <span id="y_button_1" class="dropdown-element">s</span><br>
+                <span id="y_button_2" class="dropdown-element">v</span><br>
+                <span id="y_button_3" class="dropdown-element">&phi;</span><br>
+                <span id="y_button_4" class="dropdown-element">&omega;</span><br>
+                <span id="y_button_5" class="dropdown-element">T</span><br>
+                <span id="y_button_6" class="dropdown-element">p</span><br>
+                <span id="y_button_7" class="dropdown-element">F</span><br>
+                <span id="y_button_8" class="dropdown-element">M</span><br>
+                <span id="y_button_9" class="dropdown-element">a</span><br>
+              </div>
+            </div>
+        </div>  <!-- end of div mainpic -->
+
+        <!-- ghost image behind the fixed diagram image -->
+
+        <img src="img/graphe.png" width="100%">
+
+        <br>
+        <br>
+
+        <!-- formula image 1 -->
+        <div class="pic_frame">
+          <img src="img/formel1a.png" >
+          <span class="formula_text" id="formula_text_1">x</span>
+          <span class="formula_text" id="formula_text_2">x<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_3">x<sub>max</sub></span>
+          <span class="formula_text" id="formula_text_4">x<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_5">E<sub>max</sub></span>
+          <span class="formula_text" id="formula_text_6">E<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_7">E</span>
+          <!-- input element for E -->
+          <input type="number" class="diagram_input"
+            id="e_main_input"
+            value=""
+            onclick="e_clicked()"
+            onchange="e_changed(this.value)"
+          >
+          <span class="formula_text" id="formula_text_8">E<sub>min</sub></span>
+        </div>
+        <div class="diagram_frame2">
+          <img src="img/formel1b.png" >
+          <span class="formula_text" id="formula_text_2_1">x</span>
+          <span class="formula_text" id="formula_text_2_2"></span>
+        </div>
+      <script type="text/javascript" src="js/index.js"></script>
+  <!--    <script type="text/javascript" src="cordova.js"></script> -->
+    </body>
+</html>
