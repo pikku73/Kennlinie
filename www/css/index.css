@@ -37,15 +37,15 @@ body {
 
 input[type="text"]
 {
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    outline: none;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  outline: none;
 }
 
 input[type="number"]
 {
-    background: rgba(0, 0, 0, 0);
-    border: none;
+  background: rgba(0, 0, 0, 0);
+  border: none;
 /*    outline: none;*/
 }
 
@@ -56,7 +56,7 @@ img {
 }
 
 input:focus, textarea:focus, select:focus {
-        outline: none;
+  outline: none;
 }
 
 .title {
@@ -73,7 +73,7 @@ input:focus, textarea:focus, select:focus {
   position:fixed;
   border:none;
   width:100%;
-  top:7.5vw;
+  top:8.5vw;
   left:0%;
   z-index: 2;
 }
@@ -94,6 +94,14 @@ input:focus, textarea:focus, select:focus {
   z-index: 1;
 }
 
+.diagram_frame3 {
+  position:relative;
+  border:none;
+  margin-left: auto;
+  margin-right: auto;
+  width:15%;
+  z-index: 1;
+}
 .diagram_text {
     position: absolute;
     border: solid #444444;
@@ -115,7 +123,7 @@ input:focus, textarea:focus, select:focus {
 .diagram_input {
   position: absolute;
   border: none;
-  border-color:transparent;
+  border-color: transparent;
   font-family: "Times New Roman", Times, serif;
   font-size: 5vw;
   min-width:14vw;
@@ -124,6 +132,15 @@ input:focus, textarea:focus, select:focus {
   text-align: center;
 }
 
+#toggle_e_x {
+  position: absolute;
+  border: none;
+  border-color: transparent;
+  top: 8%;
+  left:83%;
+  min-width: 12vw;
+  min-height:12vw;
+}
 
 #y_achse_main {
   top: 4%;
@@ -132,7 +149,7 @@ input:focus, textarea:focus, select:focus {
 
 #x_achse_main {
   top: 60%;
-  right:4%;
+  left: 85%;
 }
 
 #e_max_main_input {
@@ -196,27 +213,35 @@ input:focus, textarea:focus, select:focus {
   font-style: italic;
   font-weight: bold;
   top: 37.5%;
-  left:2%;
+  left:0%;
 }
 #formula_text_2 {
   top: 37.5%;
-  left:16%;
+  left:11%;
 }
 #formula_text_3 {
   top: 19%;
-  left:33%;
+  left:26%;
 }
 #formula_text_4 {
   top: 19%;
-  left:48%;
+  left:42%;
 }
 #formula_text_5 {
   top: 55%;
-  left:33%;
+  left:26%;
 }
 #formula_text_6 {
   top: 55%;
-  left:48%;
+  left:42%;
+}
+#formula_text_6b {
+  top: 19%;
+  left:52%;
+}
+#formula_text_6c {
+  top: 55%;
+  left:52%;
 }
 #formula_text_7 {
   font-style: italic;
@@ -229,18 +254,22 @@ input:focus, textarea:focus, select:focus {
   max-height: 6vw;
   padding-top: 1vw;
   top: 32.5%;
-  left:66%;
+  left:67%;
   z-index: 1;
 }
 #e_main_input {
   font-size:4vw;
   top: 30%;
-  left:63%;
+  left:65%;
   z-index: 2;
 }
 #formula_text_8 {
   top: 37.5%;
   left:79%;
+}
+#formula_text_9 {
+  top: 37.5%;
+  left:89%;
 }
 #formula_text_2_1 {
   font-style: italic;
@@ -273,6 +302,14 @@ input:focus, textarea:focus, select:focus {
 
 .dropdown {
   position: absolute;
+  background: rgba(0, 0, 0, 0);
+  display: inline-block;
+  z-index: 2;
+}
+
+.refresh {
+  position: absolute;
+  border: none;
   background: rgba(0, 0, 0, 0);
   display: inline-block;
   z-index: 2;
