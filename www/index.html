@@ -70,6 +70,10 @@
             <span class="diagram_unit_text" id="x_unit_text">
             </span>
 
+            <!-- x-e toggle button -->
+            <button class="dropdown" onClick="toggle_e_x()" id="toggle_e_x">
+            </button>
+
             <!-- drop-down element for x-axis -->
             <div class="dropdown" id="x_achse_main">
               <button onclick="x_axis_button()" class="dropbtn" id="x_button"
@@ -109,13 +113,15 @@
 
         <!-- formula image 1 -->
         <div class="pic_frame">
-          <img src="img/formel1a.png" >
+          <img src="img/formel1c.png" >
           <span class="formula_text" id="formula_text_1">x</span>
           <span class="formula_text" id="formula_text_2">x<sub>min</sub></span>
           <span class="formula_text" id="formula_text_3">x<sub>max</sub></span>
           <span class="formula_text" id="formula_text_4">x<sub>min</sub></span>
           <span class="formula_text" id="formula_text_5">E<sub>max</sub></span>
           <span class="formula_text" id="formula_text_6">E<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_6b"></span>
+          <span class="formula_text" id="formula_text_6c"></span>
           <span class="formula_text" id="formula_text_7">E</span>
           <!-- input element for E -->
           <input type="number" class="diagram_input"
@@ -125,11 +131,16 @@
             onchange="e_changed(this.value)"
           >
           <span class="formula_text" id="formula_text_8">E<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_9"></span>
         </div>
         <div class="diagram_frame2">
-          <img src="img/formel1b.png" >
+          <img src="img/formel1b.png">
           <span class="formula_text" id="formula_text_2_1">x</span>
           <span class="formula_text" id="formula_text_2_2"></span>
+        </div>
+        <div class='diagram_frame3'>
+          <br>
+          <button class='refresh' onclick='refresh_button()'><img src='img/refresh-button.png'></button>
         </div>
       <script type="text/javascript" src="js/index.js"></script>
   <!--    <script type="text/javascript" src="cordova.js"></script> -->
