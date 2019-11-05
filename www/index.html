@@ -9,12 +9,26 @@
         <title>Kennlinie linear</title>
     </head>
     <body>
+        <div>
+          <img src="img/logo-hbrs.png" style="height:8vw; width:50%">
+          <span style="font-size:3.5vw; font-family:Arial; vertical-align: top">
+            Prof. Dr. Josef Vollmer</span>
+        </div>
         <div class="title">
           Lineare Kennlinie eines Messgliedes
         </div>
+
         <div class="mainpic">
             <!-- fixed diagram image -->
-            <img src="img/graphe.png">
+            <img src="img/graph.png">
+
+            <!-- refresh button -->
+            <div >
+              <button class='refresh' onclick='refresh_button()'>
+                <img src='img/refresh-button.png'>
+              </button>
+            </div>
+
 
             <!-- input element for e_max -->
             <span class="diagram_text" id="e_max_main_text">
@@ -86,6 +100,40 @@
               </div>
             </div>
 
+            <!-- drop-down element for unit of x-axis -->
+            <div class="dropdown" id="x_achse_unit">
+              <!--
+              <select id = "myDropDown" class="dropdown-content2" onChange = "onDDChange(this);">
+                <option class="dropdown-element" value="Val1">Value 1</option>
+                <option value="Val2">Value 2</option>
+                <option value="Val3">Value 3</option>
+                <option value="Val4">Value 4</option>
+                <option value="Val5" >Value 5</option>
+                <option hidden></option>
+              </select> -->
+
+              <button onclick="x_axis_unit_button()" class="dropbtn-unit"
+                id="x_button_unit"></button>
+              <div id="x_axis_unit_dropdown" class="dropdown-content-unit" >
+                <span id="x_button_unit_1" class="dropdown-element"></span><br>
+                <span id="x_button_unit_2" class="dropdown-element"></span><br>
+                <span id="x_button_unit_3" class="dropdown-element"></span><br>
+                <span id="x_button_unit_4" class="dropdown-element"></span><br>
+              </div>
+            </div>
+
+            <!-- drop-down element for unit of y-axis -->
+            <div class="dropdown" id="y_achse_unit">
+              <button onclick="y_axis_unit_button()" class="dropbtn-unit"
+                id="y_button_unit"></button>
+              <div id="y_axis_unit_dropdown" class="dropdown-content-unit" >
+                <span id="y_button_unit_1" class="dropdown-element"></span><br>
+                <span id="y_button_unit_2" class="dropdown-element"></span><br>
+                <span id="y_button_unit_3" class="dropdown-element"></span><br>
+                <span id="y_button_unit_4" class="dropdown-element"></span><br>
+              </div>
+            </div>
+
             <!-- drop-down element for y-axis -->
             <div class="dropdown" id="y_achse_main">
               <button onclick="y_axis_button()" class="dropbtn" id="y_button"
@@ -105,17 +153,16 @@
         </div>  <!-- end of div mainpic -->
 
         <!-- ghost image behind the fixed diagram image -->
+        <img src="img/graph.png" width="100%">
 
-        <img src="img/graphe.png" width="100%">
-
-        <br>
         <br>
 
         <!-- formula image 1 -->
         <div class="pic_frame">
-          <img src="img/formel1c.png" >
+          <img src="img/formel1.png" >
           <span class="formula_text" id="formula_text_1">x</span>
           <span class="formula_text" id="formula_text_2">x<sub>min</sub></span>
+          <span class="formula_text" id="formula_text_2b"></span>
           <span class="formula_text" id="formula_text_3">x<sub>max</sub></span>
           <span class="formula_text" id="formula_text_4">x<sub>min</sub></span>
           <span class="formula_text" id="formula_text_5">E<sub>max</sub></span>
@@ -132,16 +179,19 @@
           >
           <span class="formula_text" id="formula_text_8">E<sub>min</sub></span>
           <span class="formula_text" id="formula_text_9"></span>
+          <span class="formula_text" id="formula_text_2_2"></span>
         </div>
+        <div style="text-align: right; font-size: 2.2vw; font-family: arial">
+          App (c) 2019 Björn Flintrop
+        </div>
+        <!--                          not needed anymore...
         <div class="diagram_frame2">
           <img src="img/formel1b.png">
           <span class="formula_text" id="formula_text_2_1">x</span>
           <span class="formula_text" id="formula_text_2_2"></span>
         </div>
-        <div class='diagram_frame3'>
-          <br>
-          <button class='refresh' onclick='refresh_button()'><img src='img/refresh-button.png'></button>
-        </div>
+        -->
+
       <script type="text/javascript" src="js/index.js"></script>
   <!--    <script type="text/javascript" src="cordova.js"></script> -->
     </body>

@@ -61,9 +61,10 @@ input:focus, textarea:focus, select:focus {
 
 .title {
   font-family: "Arial", Arial;
+  font-weight: bold;
   position:relative;
   border:none;
-  font-size: 5vw;
+  font-size: 4vw;
   text-align: center;
   width:100%;
   z-index: 1;
@@ -73,7 +74,16 @@ input:focus, textarea:focus, select:focus {
   position:fixed;
   border:none;
   width:100%;
-  top:8.5vw;
+  top:16vw;
+  left:0%;
+  z-index: 2;
+}
+
+.ghostpic {
+  position:fixed;
+  border:none;
+  width:100%;
+  top:17vw;
   left:0%;
   z-index: 2;
 }
@@ -94,20 +104,13 @@ input:focus, textarea:focus, select:focus {
   z-index: 1;
 }
 
-.diagram_frame3 {
-  position:relative;
-  border:none;
-  margin-left: auto;
-  margin-right: auto;
-  width:15%;
-  z-index: 1;
-}
+
 .diagram_text {
     position: absolute;
     border: solid #444444;
     border-width: 1px;
-    min-width:14vw;
-    max-width: 14vw;
+    min-width:15vw;
+    max-width: 16vw;
     font-family: "Times New Roman", Times, serif;
     font-size: 5vw;
     text-align: center;
@@ -126,8 +129,8 @@ input:focus, textarea:focus, select:focus {
   border-color: transparent;
   font-family: "Times New Roman", Times, serif;
   font-size: 5vw;
-  min-width:14vw;
-  max-width: 14vw;
+  min-width:15vw;
+  max-width: 15vw;
   min-height:7.7vw;
   text-align: center;
 }
@@ -152,6 +155,16 @@ input:focus, textarea:focus, select:focus {
   left: 85%;
 }
 
+#y_achse_unit {
+  top: 42%;
+  left:5%;
+}
+
+#x_achse_unit {
+  top: 82%;
+  left: 47%;
+}
+
 #e_max_main_input {
   top: 81.5%;
   right:10%;
@@ -164,12 +177,12 @@ input:focus, textarea:focus, select:focus {
 
 #e_min_main_input {
   top: 81.5%;
-  left:18%;
+  left:16%;
 }
 
 #e_min_main_text {
   top: 82%;
-  left:16%;
+  left:14%;
 }
 
 #e_unit_text {
@@ -205,83 +218,92 @@ input:focus, textarea:focus, select:focus {
 .formula_text {
     position: absolute;
     font-family: "Times New Roman", Times, serif;
-    font-size:4vw;
+    font-size:4.5vw;
     min-width:10vw;
     text-align: center;
 }
-#formula_text_1 {
+#formula_text_1 {    /* x */
   font-style: italic;
   font-weight: bold;
-  top: 37.5%;
-  left:0%;
+  top: 12%;
+  left:12%;
 }
-#formula_text_2 {
-  top: 37.5%;
-  left:11%;
+#formula_text_2 {   /* xmin */
+  top: 12%;
+  left:32%;
 }
-#formula_text_3 {
-  top: 19%;
-  left:26%;
-}
-#formula_text_4 {
-  top: 19%;
+#formula_text_2b {   /* xmin unit */
+  top: 12%;
   left:42%;
 }
-#formula_text_5 {
-  top: 55%;
-  left:26%;
+#formula_text_3 {   /* xmax above line */
+  top: 28.5%;
+  left:38%;
 }
-#formula_text_6 {
-  top: 55%;
-  left:42%;
+#formula_text_4 {   /* xmin above line */
+  top: 28.5%;
+  left:56%;
 }
-#formula_text_6b {
-  top: 19%;
-  left:52%;
+#formula_text_5 {   /* emax below line */
+  top: 43%;
+  left:38%;
 }
-#formula_text_6c {
-  top: 55%;
-  left:52%;
+#formula_text_6 {   /* emin below line */
+  top: 43%;
+  left:56%;
 }
-#formula_text_7 {
+#formula_text_6b {  /* unit above line */
+  top: 30%;
+  left:74%;
+}
+#formula_text_6c {  /* unit below line */
+  top: 43%;
+  left:74%;
+}
+#formula_text_7 {   /* x-Value */
   font-style: italic;
   font-weight: bold;
-  border: solid #444444;
+  border: solid #000000;
   border-width: 1px;
-  min-width:7vw;
-  max-width: 7vw;
+  min-width:16vw;
+  max-width: 16vw;
   min-height: 6vw;
   max-height: 6vw;
   padding-top: 1vw;
-  top: 32.5%;
-  left:67%;
+  text-align: center;
+  top: 59%;
+  left:42%;
   z-index: 1;
 }
-#e_main_input {
-  font-size:4vw;
-  top: 30%;
-  left:65%;
+#e_main_input {   /* x-Value input */
+  font-size:4.5vw;
+  font-weight: bold;
+  color: #000000;
+  min-width:16vw;
+  max-width: 16vw;
+  top: 58%;
+  left:43%;
   z-index: 2;
 }
-#formula_text_8 {
-  top: 37.5%;
-  left:79%;
+#formula_text_8 { /* emin third row */
+  top: 61%;
+  left:64%;
 }
-#formula_text_9 {
-  top: 37.5%;
-  left:89%;
+#formula_text_9 { /* unit third row */
+  top: 61%;
+  left:80%;
 }
-#formula_text_2_1 {
+#formula_text_2_1 {   /* x (will be deleted) */
   font-style: italic;
   font-weight: bold;
   top: 30%;
   left:20%;
 }
-#formula_text_2_2 {
+#formula_text_2_2 {   /* result */
   font-style: italic;
   font-weight: bold;
-  top: 30%;
-  left:45%;
+  top: 80%;
+  left:32%;
 }
 
 .dropbtn {
@@ -300,6 +322,22 @@ input:focus, textarea:focus, select:focus {
   z-index: 2;
 }
 
+.dropbtn-unit {
+  background-color: #3498DB;
+  background: rgba(0, 0, 0, 0);
+  color: black;
+  padding: 1vw;
+  font-size: 5vw;
+  font-style: italic;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid;
+  outline: none;
+  min-width: 9vw;
+  min-height: 9vw;
+  z-index: 2;
+}
+
 .dropdown {
   position: absolute;
   background: rgba(0, 0, 0, 0);
@@ -308,20 +346,40 @@ input:focus, textarea:focus, select:focus {
 }
 
 .refresh {
-  position: absolute;
+  position:absolute;
   border: none;
   background: rgba(0, 0, 0, 0);
   display: inline-block;
+  top: 7%;
+  left:47%;
+  min-width: 7vw;
+  min-height: 7vw;
+  max-width: 7vw;
+  max-height: 7vw;
   z-index: 2;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  text-align: center;
   background-color: #f1f1a1;
   min-width: 12vw;
   font-size: 10vw;
+  overflow: auto;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.dropdown-content-unit {
+  display: none;
+  position: absolute;
   text-align: center;
+  background-color: #f1f1a1;
+  min-width: 10vw;
+  font-size: 9vw;
   overflow: auto;
   font-style: normal;
   font-family: "Times New Roman", Times, serif;
@@ -331,6 +389,7 @@ input:focus, textarea:focus, select:focus {
 
 .dropdown-element {
   position: relative;
+
   border-bottom: 1px solid;
   z-index: 3;
 }
