@@ -2,7 +2,7 @@
 <widget id="de.h-brs.emt.kennlinie" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Kennlinie</name>
     <description>
-        Eine App zu linearen Kennlinien.
+        Eine App zum Thema lineare Kennlinie.
     </description>
     <author email="bjoern.flintrop@h-brs.de" href="http://emt.h-brs.de">
         Hochschule Bonn-Rhein-Sieg, Fachbereich EMT
