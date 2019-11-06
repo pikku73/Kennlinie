@@ -71,10 +71,9 @@ input:focus, textarea:focus, select:focus {
 }
 
 .mainpic {
-  position:fixed;
+  position:relative;
   border:none;
   width:100%;
-  top:16vw;
   left:0%;
   z-index: 2;
 }
@@ -192,22 +191,22 @@ input:focus, textarea:focus, select:focus {
 
 #x_max_main_input {
   top: 20.5%;
-  left: 4.5%;
+  left: 3.5%;
 }
 
 #x_max_main_text {
   top: 21%;
-  left: 3%;
+  left: 2%;
 }
 
 #x_min_main_input {
   top: 66.5%;
-  left: 4.5%;
+  left: 3.5%;
 }
 
 #x_min_main_text {
   top: 67%;
-  left: 3%;
+  left: 2%;
 }
 
 #x_unit_text {
