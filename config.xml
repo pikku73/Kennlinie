@@ -4,14 +4,14 @@
     <description>
         Eine App zu linearen Kennlinien.
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="bjoern.flintrop@h-brs.de" href="http://emt.h-brs.de">
+        Hochschule Bonn-Rhein-Sieg, Fachbereich EMT
     </author>
     <content src="index.html" />
 
     <preference name="permissions" value="none"/>
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="21" />
 
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
