@@ -86,6 +86,15 @@ function get_units(measurement, items) {
   return ret;
 }
 
+function rescale_image() {
+  var image = document.getElementById('valuepic');
+  var scale = (e-e_min) * 100.0 / (e_max-e_min);
+  var resultscale = "" + scale * .63 + "%";
+  image.style.width = resultscale;
+  resultscale = "" + scale * .61 + "%";
+  image.style.height = resultscale;
+}
+
 function calc_result() {
   var resultText = document.getElementById('formula_text_2_2');
 
@@ -99,6 +108,11 @@ function calc_result() {
     result = parseFloat(result).toFixed(3);
     result = result.replace(".", ",");
     resultText.innerHTML = result + " " + my_y_unit;
+
+    if((parseFloat(e) >= parseFloat(e_min)) &&
+       (parseFloat(e) <= parseFloat(e_max))) {
+      rescale_image();
+    }
   }
   else {
     resultText.innerHTML = "";
