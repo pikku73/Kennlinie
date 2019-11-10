@@ -78,6 +78,14 @@ input:focus, textarea:focus, select:focus {
   z-index: 2;
 }
 
+.valuepic {
+  position: absolute;
+  bottom: 19.5%;
+  left:20%;
+  width: 0%;
+  height: 0%;
+}
+
 .ghostpic {
   position:fixed;
   border:none;
