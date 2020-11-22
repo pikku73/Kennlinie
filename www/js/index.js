@@ -33,7 +33,8 @@ var x_items = [
   ["p", "bar"],
   ["F", "N"],
   ["M", "Nm"],
-  ["a", "g"]
+  ["a", "g"],
+  ["U", "V"]
 ];
 
 var x_unit_items = [
@@ -45,7 +46,8 @@ var x_unit_items = [
   ["p", "bar", "mbar", "Pa"],
   ["F", "kN", "N", "mN"],
   ["M", "Nm"],
-  ["a", "g"]
+  ["a", "g"],
+  ["U", "kV", "V", "mV", "μV"]
 ];
 
 var x_min = NaN;
@@ -89,7 +91,7 @@ function get_units(measurement, items) {
 function rescale_image() {
   var image = document.getElementById('valuepic');
   var scale = (e-e_min) * 100.0 / (e_max-e_min);
-  var resultscale = "" + scale * .63 + "%";
+  var resultscale = "" + scale * .625 + "%";
   image.style.width = resultscale;
   resultscale = "" + scale * .61 + "%";
   image.style.height = resultscale;
